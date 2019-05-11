@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Zadanie 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .button{
+                width:8em;
+                height: 4em;}
+            .modal{
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0,0,0,0.2);}
+            .modal__content{
+                background-color: white;
+                margin: 10% auto;
+                padding: 20px;
+                width: 30%;
+                text-align: center;}
+            .modal__content__navbar{
+                list-style-type: none;
+                margin-bottom: 1.8em;
+                padding: 0;}
+        </style>
+    </head>
+    <body>
+            <button class="button"></button>
+            <div class="modal">
+              <div class="modal__content">
+                  <ul class="modal__content__navbar">
+                      <li class="modal__content__navbar__element">
+                          <a href="3.html">3.html</a>
+                      </li>
+                  </ul>
+                  <button class="button"></button>
+              </div>
+            </div>
+        <script>
+            var modal = document.getElementsByClassName("modal")[0];
+            var btn_open = document.getElementsByClassName("button")[0];
+            var btn_close = document.getElementsByClassName("button")[1];
+            btn_open.onclick = function(){modal.style.display = "block";}
+            btn_close.onclick = function(){modal.style.display = "none";}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Zadanie 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                margin: 0;
+                width: 100%;
+                min-height: 100vh;}
+            .header {
+                grid-area: header;
+                background-color:#1A1C22;}
+            .sidebar {
+                grid-area: sidebar;
+                background-color:#6C757D;}
+            .content1 {grid-area: content1;}
+            .content2 {grid-area: content2;}
+            .content3 {grid-area: content3;}
+            .content4 {grid-area: content4;}
+            .content5 {grid-area: content5;}
+            .content6 {grid-area: content6;}
+            .footer {
+                grid-area: footer;
+                background-color:#1A1C22;}
+            .content {grid-area: content;}
+            .content > div {background-color:#343A40;}
+            @media (max-width: 599px){
+                .grid{
+                    display: grid;
+                    grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "content"
+                    "footer";
+                    grid-gap: 15px;
+                    padding: 10px;}
+                .header, .footer{
+                    height: 100px;
+                    width:100%;}
+                .sidebar{
+                    min-height: 200px;
+                    min-height: calc(50vh - 137px);
+                    overflow-y: auto;
+                    overflow-x: hidden;}
+                .content{
+                    display: grid;
+                    grid-template-areas: 
+                        "content1"
+                        "content2"
+                        "content3"
+                        "content4"
+                        "content5"
+                        "content6";
+                    grid-gap: 15px;
+                    min-height: 200px;
+                    height: calc(50vh - 137px);
+                    overflow-y: auto;
+                    overflow-x: hidden;}}
+            @media (min-width: 600px){
+                 .grid{
+                    display: grid;
+                    grid-template-areas:
+                    "header header"
+                    "sidebar sidebar"
+                    "content content"
+                    "footer footer";
+                    grid-gap: 15px;
+                    padding: 10px;}
+                .header, .footer{
+                    height: 100px;
+                    width:100%;}
+                .sidebar{
+                    min-height: 200px;
+                    min-height: calc(50vh - 132.5px);
+                    overflow-y: auto;
+                    overflow-x: hidden;}
+                .content{
+                    display: grid;
+                    grid-template-areas: 
+                        "content1 content2"
+                        "content3 content4"
+                        "content5 content6";
+                    grid-gap: 15px;
+                    min-height: 200px;
+                    min-height: calc(50vh - 132.5px);
+                    overflow-y: auto;
+                    overflow-x: hidden;}}
+            @media (min-width: 900px){
+                .grid{
+                    display: grid;
+                    grid-template-areas:
+                    "header header header"
+                    "sidebar content content"
+                    "sidebar content content"
+                    "sidebar content content"
+                    "footer footer footer";
+                    grid-gap: 15px;
+                    padding: 10px;}
+                .header, .footer{
+                    height: 100px;
+                    width:100%;}
+                .sidebar{
+                    min-height: 200px;
+                    height: calc(100vh - 250px);
+                    width: 400px;
+                    overflow-y: auto;
+                    overflow-x: hidden;}
+                .content{
+                    display: grid;
+                    grid-template-areas: 
+                        "content1 content2"
+                        "content3 content4"
+                        "content5 content6";
+                    grid-gap: 15px;
+                    min-height: 200px;
+                    height: calc(100vh - 250px);
+                    width: calc(100vw - 435px);
+                    overflow-y: auto;
+                    overflow-x: hidden;}}
+            @media (min-width: 1200px){
+                .grid{
+                    min-height: 100%;
+                    display: grid;
+                    grid-template-areas:
+                    "header header header header"
+                    "sidebar content content content"
+                    "sidebar content content content"
+                    "sidebar content content content"
+                    "footer footer footer footer";
+                    grid-gap: 15px;
+                    padding: 10px;}
+                .header, .footer{
+                    height: 100px;
+                    width:100%;}
+                .sidebar{
+                    min-height: 200px;
+                    width: 400px;
+                    overflow-y: auto;
+                    overflow-x: hidden;}
+                .content{
+                    display: grid;
+                    grid-template-areas: 
+                        "content1 content2 content3"
+                        "content4 content5 content6";
+                    grid-gap: 15px;
+                    min-height: 200px;
+                    width: calc(100vw - 435px);
+                    overflow-y: auto;
+                    overflow-x: hidden;}}
+        </style>
+    </head>
+    <body>
+    <div class="grid">
+       <div class="header"></div>
+        <div class="sidebar"></div>
+        <div class="content">
+            <div class="content1"></div>
+            <div class="content2"></div>
+            <div class="content3"></div>
+            <div class="content4"></div>
+            <div class="content5"></div>
+            <div class="content6"></div>
+        </div>
+        <div class="footer"></div>
+        </div>
+    </body>
+</html>

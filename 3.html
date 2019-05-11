@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Zadanie 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .filter{margin-bottom: 1em;}
+            .filter__input{
+                padding: 0.5em;
+                width:30%;}
+            .filter__button{
+                padding: 0.5em;
+                width:auto;}
+            .table{
+                width: 100%;
+                border: 1px solid #000;
+                border-collapse: collapse;
+                border-spacing: 0;
+                font-size: 1.2em;}
+            .table__row{border-bottom: 1px solid #000;}
+            .table__row__cell{padding: 0.5em;}
+        </style>
+    </head>
+    <body>
+        <form class="filter" onsubmit="tableFilter()" action="#">
+            <input class="filter__input" type="text">
+            <input class="filter__button" type="submit">
+        </form>
+        <table class="table">
+                <tr class="table__row"><td class="table__row__cell">Walmart</td></tr>
+                <tr class="table__row"><td class="table__row__cell">State Grid</td></tr>
+                <tr class="table__row"><td class="table__row__cell">Sinopec Group</td></tr>
+                <tr class="table__row"><td class="table__row__cell">China National Petroleum</td></tr>
+                <tr class="table__row"> <td class="table__row__cell">Royal Dutch Shell</td></tr>
+                <tr class="table__row"><td class="table__row__cell">Toyota Motor</td></tr>
+                <tr class="table__row"><td class="table__row__cell">Volkswagen</td></tr>
+                <tr class="table__row"><td class="table__row__cell">BP</td></tr>
+                <tr class="table__row"><td class="table__row__cell">Exxon Mobil</td></tr>
+                <tr class="table__row"><td class="table__row__cell">Berkshire Hathaway</td></tr>
+        </table>
+        <script>
+            function tableFilter() {
+                var input = document.querySelector('.filter__input');
+                var input_value = input.value.toUpperCase();
+                var row = document.querySelector('.table__row');
+                var rows = document.querySelectorAll('.table__row');
+                var cell = document.querySelector('.table__row__cell');
+                rows.forEach(row => row.style.display = [...row.children].find(cell => cell.innerHTML.toUpperCase().includes(input_value)) ? 'block' : 'none');}   
+        </script>
+    </body>
+</html>
